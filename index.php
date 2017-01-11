@@ -10,6 +10,7 @@
 			include('Student.php');
 
 			$students = array();
+			$studentNo = 1;
 			
 			$first = new Student();
 			$first->surname = "Doe";
@@ -34,8 +35,12 @@
 			
 			ksort($students); 
 			
-			foreach($students as $student)
+			foreach($students as $student){
+				
+				echo '**********Student'.$studentNo.'**********';
 				echo $student->toString();
+				$studentNo++;
+			}
 		?>
 	</body>
 </html>
